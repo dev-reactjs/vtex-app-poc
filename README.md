@@ -1,4 +1,4 @@
-This project was developed to show react ui with Vtex components.
+This project was developed to show demo of react ui with Vtex components.
 
 ## Technical specification
 
