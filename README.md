@@ -1,4 +1,4 @@
-This project was developed to show demo of react ui with Vtex components.
+This project was developed to show demo of react ui with Vtex components.I tried to cover all things that generally needed to develop any app. If you want example of some specific thing to implement, You guys can inform us by comment, I'll try to implement it asap.
 
 ## Technical specification
 
