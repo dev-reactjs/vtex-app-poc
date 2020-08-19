@@ -23,5 +23,5 @@ Your app is ready to be deployed!
 
 ### `yarn lint`
 
-To test conde formatting linting errors
+To test code formatting linting errors
 
