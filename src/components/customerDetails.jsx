@@ -1,43 +1,39 @@
 import React, { Component } from "react";
-import Input from '@vtex/styleguide/lib/Input'
-import Collapsible from '@vtex/styleguide/lib/Collapsible';
-
+import Input from "@vtex/styleguide/lib/Input";
+import Collapsible from "@vtex/styleguide/lib/Collapsible";
 
 class CustomerDetails extends Component {
-    state = {
-        isOpen: false
-    }
+  state = {
+    isOpen: false,
+  };
 
-    render() {
-        return(
+  render() {
+    return (
+      <div>
+        <div>
+          <Input label="Receiver Name" />
+        </div>
+        <div>
+          <Input label="Receiver Contact Number" />
+        </div>
+        <div>
+          <Input label="Email" />
+        </div>
+        <div>
+          <Collapsible
+            onClick={(e) => this.setState({ isOpen: e.target.isOpen })}
+            isOpen={this.state.isOpen}
+          >
             <div>
-                <div className="mb3">
-                    <Input label="Receiver Name" />
-                </div>
-                <div className="mb3">
-                    <Input label="Receiver Contact Number" />
-                </div>
-                <div className="mb3">
-                    <Input label="Email" />
-                </div>
-                <div className="mb5 mt5">
-                    <Collapsible
-                        onClick={e => this.setState({ isOpen: e.target.isOpen })}
-                        isOpen={this.state.isOpen}
-                    >
-                        <div className="mt4">
-                            <div className="mb3">
-                                <Input
-                                    type="password"
-                                    label="Account Number"
-                                />
-                            </div>
-                        </div>
-                    </Collapsible>
-                </div>
+              <div>
+                <Input type="password" label="Account Number" />
+              </div>
             </div>
-        )
-    }
+          </Collapsible>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default CustomerDetails;
