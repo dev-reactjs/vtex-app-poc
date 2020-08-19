@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const NavBar = ({ totalItems }) => {
   return (
@@ -16,7 +16,11 @@ const NavBar = ({ totalItems }) => {
 };
 
 NavBar.propTypes = {
-  totalItems: PropTypes.number
+  totalItems: PropTypes.number,
+};
+
+NavBar.defaultProps = {
+  totalItems: 0,
 };
 
 export default NavBar;

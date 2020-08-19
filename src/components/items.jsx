@@ -1,19 +1,13 @@
 import React, { Component } from "react";
 import Card from "@vtex/styleguide/lib/Card";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import Item from "./item";
 import Button from "./button";
 
 class Items extends Component {
   render() {
-    const {
-      onReset,
-      onIncrement,
-      onDelete,
-      onDecrement,
-      items,
-    } = this.props;
+    const { onReset, onIncrement, onDelete, onDecrement, items } = this.props;
     return (
       <Card>
         <div>
@@ -25,7 +19,7 @@ class Items extends Component {
             <i className="fa fa-refresh" aria-hidden="true" />
           </Button>
         </div>
-        {items.map(item => (
+        {items.map((item) => (
           <Item
             key={item.id}
             item={item}
@@ -40,11 +34,11 @@ class Items extends Component {
 }
 
 Items.propTypes = {
-  onReset: PropTypes.func,
-  onIncrement: PropTypes.func,
-  onDecrement: PropTypes.func,
-  onDelete: PropTypes.func,
-  items: PropTypes.array,
-};  
+  onReset: PropTypes.func.isRequired,
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  items: PropTypes.array.isRequired,
+};
 
 export default Items;

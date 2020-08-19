@@ -1,22 +1,23 @@
 import React, { Component } from "react";
-import Box from '@vtex/styleguide/lib/Box';
-import Divider from '@vtex/styleguide/lib/Divider';
+import Box from "@vtex/styleguide/lib/Box";
+import Divider from "@vtex/styleguide/lib/Divider";
 
 import NavBar from "./components/navbar";
 import Items from "./components/items";
-import { Default_Items } from './data';
+import CustomerDetails from "./components/customerDetails";
+import { Default_Items } from "./data";
 import { handleActons } from "./utils";
 
 class App extends Component {
   state = {
-    items: Default_Items
+    items: Default_Items,
   };
 
-  onIncrement = item => {
+  onIncrement = (item) => {
     this.setState({ items: handleActons("add", this.state.items, item) });
   };
 
-  onDecrement = item => {
+  onDecrement = (item) => {
     this.setState({ items: handleActons("minus", this.state.items, item) });
   };
 
@@ -24,7 +25,7 @@ class App extends Component {
     this.setState({ items: handleActons("reset", this.state.items) });
   };
 
-  onDelete = itemId => {
+  onDelete = (itemId) => {
     this.setState({ items: handleActons("delete", this.state.items, itemId) });
   };
 
@@ -33,7 +34,7 @@ class App extends Component {
     return (
       <Box>
         <NavBar
-          totalItems={items.reduce((prev, cur) => (prev + cur.quantity), 0)}
+          totalItems={items.reduce((prev, cur) => prev + cur.quantity, 0)}
         />
         <Divider orientation="horizontal" />
         <main className="container">
@@ -44,6 +45,7 @@ class App extends Component {
             onDecrement={this.onDecrement}
             onDelete={this.onDelete}
           />
+          <CustomerDetails />
         </main>
       </Box>
     );
