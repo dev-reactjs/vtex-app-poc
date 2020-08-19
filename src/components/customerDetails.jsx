@@ -18,7 +18,7 @@ class CustomerDetails extends Component {
                     <Input label="Receiver Contact Number" />
                 </div>
                 <div className="mb3">
-                    <Input label="Email" prefix={<span>@</span>} />
+                    <Input label="Email" />
                 </div>
                 <div className="mb5 mt5">
                     <Collapsible
